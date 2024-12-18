@@ -269,7 +269,8 @@ public class MsgUtil {
       final Integer level = entries.getValue();
       Component component;
       try {
-        component = Component.empty().color(NamedTextColor.YELLOW).append(PLUGIN.getPlatform().getTranslation(entries.getKey()));
+        // SGMC Fix
+        component = Component.empty().color(NamedTextColor.GOLD).append(Component.text(" ")).append(PLUGIN.getPlatform().getTranslation(entries.getKey()));
       } catch(Throwable error) {
         component = MsgUtil.setHandleFailedHover(null, Component.text(entries.getKey().getKey().toString()));
         QuickShop.getInstance().logger().warn("Failed to handle translation for Enchantment {}", entries.getKey().getKey(), error);

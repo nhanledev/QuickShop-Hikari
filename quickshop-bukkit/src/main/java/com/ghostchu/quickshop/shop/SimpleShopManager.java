@@ -927,7 +927,8 @@ public class SimpleShopManager extends AbstractShopManager implements ShopManage
                 translation = MsgUtil.setHandleFailedHover(p, Component.text(potionEffect.getType().getName()));
                 plugin.logger().warn("Failed to handle translation for PotionEffect {}", potionEffect.getType().getKey(), th);
               }
-              chatSheetPrinter.printLine(Component.empty().color(NamedTextColor.YELLOW).append(translation).append(Component.text(" " + (level <= 10? RomanNumber.toRoman(level) : level))));
+              // SGMC Fix
+              chatSheetPrinter.printLine(Component.empty().color(NamedTextColor.GOLD).append(" ").append(translation).append(Component.text(" " + (level <= 10? RomanNumber.toRoman(level) : level))));
             }
           }
         } else {
